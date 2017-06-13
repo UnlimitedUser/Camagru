@@ -1,0 +1,34 @@
+body {
+    background-image: linear-gradient(#fbfcfe,#edeff2);
+    background-repeat: repeat;
+}
+
+#header {
+    padding: 0px 20px;
+    border-bottom: 1px solid white;
+}
+
+#header a {
+    color: #4CAF50;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#header a:hover {
+    color: #368025;
+    text-shadow: 1px 1px 2px black, 0 0 5px black, 0 0 5px black;
+    transition: color 300ms text-shadow 300ms;
+}
+
+#content {
+    min-height: 700px;
+    text-align: center;
+}
+
+#footer {
+    color: #969696;
+    font-weight: bold;
+    text-align: center;
+}

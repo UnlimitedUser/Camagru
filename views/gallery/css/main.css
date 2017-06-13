@@ -1,0 +1,19 @@
+.likebutton {
+    display: inline-block;
+}
+
+p {
+    display: inline;
+}
+
+textarea {
+    display: block;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.imageuser {
+    align-content: center;
+}
