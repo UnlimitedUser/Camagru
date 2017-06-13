@@ -1,10 +1,45 @@
-<?php  if(!isset($_SESSION['userSession']))
+<?php
+session_start();
+if(!isset($_SESSION['userSession']))
 {
     header("Location: ".URL."index");
-}
+}?>
 
-require 'views/header.php';
-?>
+    <!DOCTYPE html>
+    <html>
+    <title>Camagru</title>
+    <link rel="stylesheet" href="<?php echo URL; ?>public/css/default.css"/>
+    <link rel="stylesheet" href="<?php echo URL; ?>views/dashboard/css/main.css"/>
+    <script src="views/dashboard/js/default.js"></script>
+<?php
+    if(isset($this->css))
+    {
+        foreach ($this->css as $css) {
+            echo '<link rel="stylesheet" href="'.URL.'views/'.$css.'"/>';
+        }
+    }
+    ?>
+    <?php
+        if(isset($this->js))
+        {
+            foreach ($this->js as $js) {
+                echo '<script type="text/javascript" src="'.URL.'views/'.$js.'"></script>';
+            }
+        }
+    ?>
+<body>
+    <div id="header">
+        <br>
+        <a href="<?php echo URL; ?>index">Index</a>
+        <?php if(isset($_SESSION['userSession'])) : ?>
+            <a href="<?php echo URL; ?>gallery">Gallery</a>
+            <a href="<?php echo URL; ?>logout">Logout</a>
+        <?php else : ?>
+            <a href="<?php echo URL; ?>login">Login</a>
+        <?php endif; ?>
+    </div>
+
+<div id="content">
 <div class="contentarea">
     <div class="camera">
         <video id="video">Video stream not available.</video>

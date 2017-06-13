@@ -25,6 +25,7 @@
     <a href="<?php echo URL; ?>index">Index</a>
     <?php if(isset($_SESSION['userSession'])) : ?>
         <a href="<?php echo URL; ?>gallery">Gallery</a>
+        <a href="<?php echo URL; ?>dashboard">Dashboard</a>
     <a href="<?php echo URL; ?>logout">Logout</a>
     <?php else : ?>
     <a href="<?php echo URL; ?>login">Login</a>
